@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#00304a">
+<title>客簿 · 单人本地 CRM</title>
+<meta name="description" content="一个人用的小型 CRM：客户、项目、任务、报价四张表，表格与看板视图，报价单可打印或导出 PDF。纯前端，数据只存本机，完全免费。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top" id="top">
+  <div class="bar">
+    <div class="brand"><span class="logo-dot"></span><span class="brand-name">客簿</span><span class="brand-en">Kebu · Solo CRM</span></div>
+    <nav class="pill" id="nav" aria-label="主导航"></nav>
+    <div class="bar-r"><button class="btn glass" data-act="quick" id="quickBtn">+ 新建</button></div>
+  </div>
+  <div class="hero" id="hero"></div>
+</header>
+<div class="banner" id="banner" hidden></div>
+<main class="content" id="content" tabindex="-1"></main>
+<footer class="foot" id="foot">客簿 · 免费、无账号、无广告 · <b>单人使用，不支持多人协作</b> · 提醒只在打开页面时显示，<b>关闭浏览器时不会提醒</b> · 数据只存在本机浏览器，请定期“导出备份”</footer>
+<dialog id="dlg" aria-labelledby="dlgTitle"></dialog>
+<input type="file" id="fileIn" accept=".csv,.txt,text/csv" hidden>
+<input type="file" id="restoreIn" accept=".json,application/json" hidden>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="core.js"></script>
+<script src="sample.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
